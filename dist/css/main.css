@@ -1,6 +1,6 @@
 .menu-btn {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   right: 35px;
   top: 35px;
   cursor: pointer;
@@ -23,6 +23,7 @@
       transform: rotate(-45deg) translate(7px, -6px); }
 
 .menu {
+  position: fixed;
   top: 0;
   width: 100%;
   opacity: 1;
@@ -161,13 +162,11 @@ main {
         transition: all 0.5s ease-out; }
 
 main#about {
-  overflow: visible; }
+  overflow: auto; }
 
-/* Sort out scrolling
-#about {
-  overflow: visable;
-}
-*/
+about {
+  overflow: visable; }
+
 .about-info {
   display: grid;
   grid-gap: 30px;
@@ -194,12 +193,67 @@ main#about {
     padding: 0.5rem;
     border-bottom: #ff9e1f 5px solid; }
 
+.projects {
+  display: grid;
+  grid-gap: 2.5rem;
+  grid-template-columns: repeat(2, 1fr); }
+
+.projects img {
+  width: 100%;
+  border: 3px #fff solid; }
+  .projects img a {
+    width: 50%; }
+  .projects img:hover {
+    opacity: 0.5;
+    border-color: #ff9e1f;
+    transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #ff9e1f solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 3.5rem 4.5rem;
+      background: #ff9e1f;
+      color: #000000;
+      border: #000000 3px solid; }
+      .boxes div:hover span {
+        color: #000000; }
+
+.btn, .btn-light,
+btn-dark {
+  display: block;
+  padding: 0.5rems 1rem;
+  border: 3px;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-light:hover,
+  btn-dark:hover {
+    background: #ff9e1f;
+    color: #000000;
+    transition: all 0.5s ease-out; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #2b2b2b;
   color: #ffffff;
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -229,8 +283,12 @@ main#about {
       height: 150px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; }
+  .projects {
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }

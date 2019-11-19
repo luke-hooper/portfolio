@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+a {
+  //position: relative;
+}
+
 body {
   @include background;
   background: $primary-color;
@@ -64,6 +68,7 @@ main {
     margin-top: 1rem;
 
     a {
+      //position: relative;
       padding: 0.4rem;
 
       &:hover {
@@ -76,14 +81,13 @@ main {
 
 main {
   &#about {
-    overflow: visible;
+    overflow: auto;
   }
 }
-/* Sort out scrolling
-#about {
+
+about {
   overflow: visable;
 }
-*/
 
 .about-info {
   display: grid;
@@ -120,6 +124,75 @@ main {
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
+}
+
+// Projects page
+
+.projects {
+  display: grid;
+  grid-gap: 2.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.projects img {
+  width: 100%;
+  border: 3px #fff solid;
+
+  & a {
+    width: 50%;
+    //position: relative;
+  }
+
+  &:hover {
+    opacity: 0.5;
+    border-color: $secondary-color;
+    @include easeOut;
+  }
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 3px $secondary-color solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 3.5rem 4.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      border: #000000 3px solid;
+
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rems 1rem;
+  border: 3px;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    @include easeOut;
+  }
+}
+
+.btn-light,
+btn-dark {
+  @extend .btn;
 }
 
 #main-footer {

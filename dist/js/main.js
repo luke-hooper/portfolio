@@ -16,6 +16,7 @@ function toggleMenu() {
   menu.classList.toggle("show");
   menuNav.classList.toggle("show");
   menuBranding.classList.toggle("show");
+
   navItems.forEach(items => {
     return items.classList.toggle("show");
   });

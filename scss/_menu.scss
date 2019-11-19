@@ -2,7 +2,7 @@
 
 .menu-btn {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   right: 35px;
   top: 35px;
   cursor: pointer;
@@ -44,7 +44,7 @@
 // Menu Overlay
 
 .menu {
-  //position: fixed;
+  position: fixed;
   top: 0;
   width: 100%;
   opacity: 1;
