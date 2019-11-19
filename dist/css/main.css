@@ -14,18 +14,18 @@
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
-      background-color: #eece1a;
+      background-color: #ff9e1f;
       transform: rotate(45deg) translate(5px, 5px); }
     .menu-btn.close .btn-line:nth-child(2) {
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
-      background-color: #eece1a;
+      background-color: #ff9e1f;
       transform: rotate(-45deg) translate(7px, -6px); }
 
 .menu {
   top: 0;
   width: 100%;
-  opacity: 0.95;
+  opacity: 1;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -59,14 +59,14 @@
       background: url("../img/portrait.jpg");
       border-radius: 50%;
       background-color: #444444;
-      border: solid 3px #eece1a; }
+      border: solid 3px #ff9e1f; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #ff9e1f; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -78,7 +78,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #ff9e1f; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -91,6 +91,37 @@
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
 
 * {
   overflow: hidden;
@@ -144,7 +175,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #ff9e1f; }
 
 main {
   padding: 4rem;
@@ -158,5 +189,5 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #ff9e1f;
         transition: all 0.5s ease-out; }
