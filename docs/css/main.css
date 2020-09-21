@@ -197,7 +197,10 @@ main#about {
 
 .projects img {
   width: 100%;
-  border: 3px #ffffff solid; }
+  border: 3px #ffffff solid;
+  height: auto;
+  object-fit: cover;
+  min-height: 15vh; }
   .projects img a {
     width: 50%; }
   .projects img:hover {

@@ -4,8 +4,8 @@
   "description": "Resposive website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "new1": "echo\"Hellow from node script"
+    "sass": "node-sass -w scss/ -o docs/css/ --recursive",
+    "new1": "echo \"Hello from node script\""
   },
   "author": "Luke Hooper",
   "license": "MIT",

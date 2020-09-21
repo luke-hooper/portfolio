@@ -129,6 +129,9 @@ main {
 .projects img {
   width: 100%;
   border: 3px #ffffff solid;
+  height: auto;
+  object-fit: cover;
+  min-height: 15vh;
 
   & a {
     width: 50%;
