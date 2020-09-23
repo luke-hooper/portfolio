@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Resposive website",
   "main": "index.js",
-  "homepage": "https://luke-hooper.github.io/portfolio",
+  "homepage": "https://lukehooper.co.uk",
   "scripts": {
     "deploy": "gh-pages -d docs",
     "sass": "node-sass -w scss/ -o docs/css/ --recursive",
